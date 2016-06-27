@@ -12,7 +12,7 @@ let
     then (old: pkgName: overrideDerivation old (_ : {
       src = "${localProjectsRoot}/${pkgName}/";
     }))
-    else (old: old)
+    else (old: _: old)
   ;
 
   # load a package and override it if we are

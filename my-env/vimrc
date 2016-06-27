@@ -1,0 +1,23 @@
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set number
+set mouse=a
+
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+
+let &colorcolumn=join(range(81,999),",")
+hi ColorColumn ctermbg=0
+
+set backspace=2 " make backspace work like most other apps
+
+" let g:airline#extensions#tabline#enabled = 1
+let g:airline_left_sep = '❱'
+let g:airline_right_sep = '❰'
+let g:ycm_confirm_extra_conf = 0
+
+
