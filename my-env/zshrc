@@ -1,0 +1,29 @@
+source ~/.profile
+eval $( dircolors -b $HOME/.zsh/LS_COLORS )
+
+# emacs beginning / end of line commands
+bindkey -e
+
+# make zsh nice
+setopt PROMPT_SUBST 			# prompt subst
+
+zstyle ':completion:*' menu select      # tab menus
+bindkey '^[[Z' reverse-menu-complete    # shift tab move back in menus
+
+# incremental shared history
+setopt SHARE_HISTORY
+HISTSIZE=1200
+SAVEHIST=1000
+HISTFILE=~/.zsh/zsh_history
+
+# history search a la robyrussel's shit
+bindkey "OA" history-beginning-search-backward
+bindkey "OB" history-beginning-search-forward
+
+
+# nix stuff
+alias nix-hspkg='nix-env -f "<nixpkgs>" -qaP -A haskellPackages'
+alias nix-shell='nix-shell --run zsh'
+alias vim='vim-plugins'
+alias ls='ls --color'
+

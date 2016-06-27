@@ -23,9 +23,8 @@ vim_configurable.customize {
   ] ++ 
 
   # some packages do not build on osx, so we only add them if we are
-  # not building for osx
+  # not on osx 
   (if ! osx then [
-      # these packages do not work on osx for a variety of reasons
       { name = "youcompleteme"; } # llvm build broken on osx
   ] else []);
 }

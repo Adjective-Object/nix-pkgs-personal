@@ -2,10 +2,10 @@
 {localProjectsRoot ? null}:
 let 
   pkgs = import <nixpkgs> {};
-  lib = import ./lib.nix {
+  quick-install = import ./lib/quick-install.nix {
     inherit localProjectsRoot pkgs;
   };
-in with lib; with pkgs;
+in with quick-install; with pkgs;
 # list of projects that have been packaged so far
 {
   
@@ -32,6 +32,11 @@ in with lib; with pkgs;
   vim-osx = callPackage ./my-env/vim.nix {
     name = "vim-osx";
     osx=true;
+  };
+
+  # zsh
+  zsh = callPackage ./my-env/zsh.nix {
+    antigen-hs-bridge = ./lib/antigen-hs-bridge.nix;
   };
 
 }
