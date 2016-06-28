@@ -16,6 +16,9 @@ in with quick-install; with pkgs;
   # websites
   blog = loadPackage websites/blog.nix "blog";
   personal-site = loadPackage websites/personal-site.nix "personal-site";
+  elm-cloth-simulation = loadPackage 
+    websites/elm-cloth-simulation.nix 
+    "elm-cloth-simulation";
 
   # xgcm environment tools
   
