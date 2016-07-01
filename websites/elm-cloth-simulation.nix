@@ -13,7 +13,12 @@ stdenv.mkDerivation {
   };
 
   # disable other phases (too much stuff)
-  phases = [ "configurePhase" "buildPhase" "installPhase" ];
+  phases = [
+    "unpackPhase"
+    "configurePhase"
+    "buildPhase"
+    "installPhase"
+  ];
 
   configurePhase = ''
     # cabal homeless shelter fix
@@ -23,13 +28,10 @@ stdenv.mkDerivation {
     export GIT_SSL_CAINFO=/etc/ssl/certs/ca-certificates.crt
     export SSL_CERT_FIL=/etc/ssl/certs/ca-certificates.crt
 
-
   '';
 
   buildPhase = ''
-    pwd
-    ls
-    elm-package install
+    elm-package install --yes
     elm-make App.elm --yes
   '';
 
