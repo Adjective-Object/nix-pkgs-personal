@@ -41,6 +41,9 @@ in stdenv.mkDerivation {
     mkdir $out
     mv _site/* $out
     cd $out
+    '';
+
+  deployPhase = ''
 
     git init
     git config user.email "nix-autobuild@huang-hobbs.co"

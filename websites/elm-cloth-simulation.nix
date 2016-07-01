@@ -5,8 +5,8 @@ stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "Adjective-Object";
     repo = "elm-cloth-simulation";
-    rev = "2dcd6f70d2a9184bddf108f9520d480776e17a3c";
-    sha256 = "09lkkwgxx21394pix80cqv8f45kvjswk2qz4w8785cg8bfhlk0pj";
+    rev = "47e476ae436556392c4f02371bc906bdd977cd57";
+    sha256 = "0m0a9lylv6fyzc73bwzkza4kdgaz0hsi2qb0s6pql6kfvi8qwrha";
   };
   meta = {
     description = "Cloth simulation written in elm";

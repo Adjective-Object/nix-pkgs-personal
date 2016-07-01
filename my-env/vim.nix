@@ -17,8 +17,8 @@ vim_configurable.customize {
     { name = "vim-addon-nix"; }
     { name = "Gist"; }
 
-    # only load when opening a .php file
-    { name = "phpCompletion"; filename_regex = "^.php\$"; }
+    # example of how to open a package only on certain filenames
+    # { name = "phpCompletion"; filename_regex = "^.php\$"; }
 
   ] ++ 
 

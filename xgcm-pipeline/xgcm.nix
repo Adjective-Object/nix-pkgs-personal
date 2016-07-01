@@ -1,15 +1,14 @@
-{ fetchFromGitHub, stdenv, pkgconfig, boost, lua }:
+{ fetchFromGitHub, stdenv, pkgconfig, lua, cmake }:
 let version = "0.1";
-    pkgsha = "65dc20cc1a03d4feba990f830186404c90462d599e5f4b37610d4d822d67aec4";
 
 in stdenv.mkDerivation {
   name = "xgcm-${version}";
-  buildInputs = [ lua ];
+  buildInputs = [ lua cmake stdenv pkgconfig ];
   src = fetchFromGitHub {
     owner = "Adjective-Object";
     repo = "xgcm";
-    rev = "c2a14696ae78f02284d144617427ec6bbf400673";
-    sha256 = pkgsha;
+    rev = "377c16437e541bf964f9e7a259d47bd47743e938";
+    sha256 = "15v5sbfn5d7dkga3rlm8h4xaimqi194cd912n217acq14yk1kwx1";
   };
 
   meta = {
@@ -19,6 +18,11 @@ in stdenv.mkDerivation {
   };
 
   makeFlags="PREFIX=$(out)";
+
+  installPhase = ''
+    mkdir -p $out/bin
+    mv xgcm $out/bin/xgcm
+  '';
 
 }
 

@@ -40,6 +40,9 @@ in stdenv.mkDerivation {
   installPhase = ''
     mkdir $out
     mv _site/* $out
+    '';
+  
+  deployPhase = ''
     cd $out
 
     git init
