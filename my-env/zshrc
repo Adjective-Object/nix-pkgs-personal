@@ -24,6 +24,5 @@ bindkey "OB" history-beginning-search-forward
 # nix stuff
 alias nix-hspkg='nix-env -f "<nixpkgs>" -qaP -A haskellPackages'
 alias nix-shell='nix-shell --run zsh'
-alias vim='vim-plugins'
 alias ls='ls --color'
 

@@ -15,6 +15,8 @@ vim_configurable.customize {
     { name = "vim-nix"; }
     { name = "Tagbar"; }
     { name = "vim-addon-nix"; }
+    { name = "vim-buffergator"; }
+    { name = "ctrlp-vim"; }
     { name = "Gist"; }
 
     # example of how to open a package only on certain filenames
