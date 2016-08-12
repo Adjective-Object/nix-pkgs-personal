@@ -18,6 +18,7 @@ vim_configurable.customize {
     { name = "vim-buffergator"; }
     { name = "ctrlp-vim"; }
     { name = "Gist"; }
+    { name = "vim-multiple-cursors"; }
 
     # example of how to open a package only on certain filenames
     # { name = "phpCompletion"; filename_regex = "^.php\$"; }
