@@ -25,3 +25,5 @@ let g:buffergator_autoupdate = 1
 let g:buffergator_display_regime = "bufname"
 let g:buffergator_sort_regime    = "filepath"
 
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor\|result'
+
