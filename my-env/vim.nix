@@ -1,4 +1,4 @@
-{vim_configurable, vimPlugins, name ? "vim", osx ? false}:
+{stdenv, vim_configurable, vimPlugins, name ? "vim"}:
 vim_configurable.customize {
   inherit name;
   # add custom .vimrc lines like this:
@@ -7,18 +7,20 @@ vim_configurable.customize {
   vimrcConfig.vam.pluginDictionaries = [
 
     # load always
+    { name = "Gist"; }
+    { name = "Tagbar"; }
+    { name = "The_NERD_tree"; }
+    { name = "UltiSnips"; }
+    { name = "ctrlp-vim"; }
+    { name = "vim-addon-nix"; }
     { name = "vim-airline"; }
     { name = "vim-airline-themes"; }
-    { name = "The_NERD_tree"; }
+    { name = "vim-buffergator"; }
     { name = "vim-coffee-script"; }
     { name = "vim-easy-align"; }
-    { name = "vim-nix"; }
-    { name = "Tagbar"; }
-    { name = "vim-addon-nix"; }
-    { name = "vim-buffergator"; }
-    { name = "ctrlp-vim"; }
-    { name = "Gist"; }
     { name = "vim-multiple-cursors"; }
+    { name = "vim-nix"; }
+    { name = "vim-snippets"; }
 
     # example of how to open a package only on certain filenames
     # { name = "phpCompletion"; filename_regex = "^.php\$"; }
@@ -27,7 +29,7 @@ vim_configurable.customize {
 
   # some packages do not build on osx, so we only add them if we are
   # not on osx 
-  (if ! osx then [
+  (if ! stdenv.isDarwin then [
       { name = "youcompleteme"; } # llvm build broken on osx
   ] else []);
 }

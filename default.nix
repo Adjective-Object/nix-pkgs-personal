@@ -32,10 +32,6 @@ in with quick-install; with pkgs;
 
   # vim
   vim = callPackage ./my-env/vim.nix {};
-  vim-osx = callPackage ./my-env/vim.nix {
-    name = "vim-osx";
-    osx=true;
-  };
 
   # zsh
   zsh = callPackage ./my-env/zsh.nix {
