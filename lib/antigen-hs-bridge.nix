@@ -1,4 +1,5 @@
-{stdenv, haskellPackages, fetchFromGitHub, git,
+{stdenv, haskellPackages,
+ fetchFromGitHub, git, cacert,
  myAntigenBundle, 
  extra-zshrc ? null,
  name ? "zsh-custom"}:
@@ -45,8 +46,8 @@ in stdenv.mkDerivation {
     export ANTIGEN_HS_HOME="${antigen-hs}";
 
     # locate ssl certs for using git in the build shell
-    export GIT_SSL_CAINFO=/etc/ssl/certs/ca-certificates.crt
-    export SSL_CERT_FIL=/etc/ssl/certs/ca-certificates.crt
+    export GIT_SSL_CAINFO=${cacert}/etc/ssl/certs/ca-bundle.crt
+    export SSL_CERT_FILE=${cacert}/etc/ssl/certs/ca-bundle.crt
 
     # package invokes cabal-install itself so we export HOME as /tmp 
     # to avoid the /homeless-shelter issue
