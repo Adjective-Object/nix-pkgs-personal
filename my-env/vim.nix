@@ -21,6 +21,7 @@ vim_configurable.customize {
     { name = "vim-multiple-cursors"; }
     { name = "vim-polyglot"; }
     { name = "vim-snippets"; }
+    { name = "fugitive"; }
 
     # example of how to open a package only on certain filenames
     # { name = "phpCompletion"; filename_regex = "^.php\$"; }
