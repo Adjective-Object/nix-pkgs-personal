@@ -19,7 +19,7 @@ vim_configurable.customize {
     { name = "vim-coffee-script"; }
     { name = "vim-easy-align"; }
     { name = "vim-multiple-cursors"; }
-    { name = "vim-nix"; }
+    { name = "vim-polyglot"; }
     { name = "vim-snippets"; }
 
     # example of how to open a package only on certain filenames
