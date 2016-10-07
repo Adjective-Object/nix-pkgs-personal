@@ -7,21 +7,23 @@ vim_configurable.customize {
   vimrcConfig.vam.pluginDictionaries = [
 
     # load always
+    { name = "ctrlp-vim"; }
+    { name = "fugitive"; }
     { name = "Gist"; }
     { name = "Tagbar"; }
     { name = "The_NERD_tree"; }
     { name = "UltiSnips"; }
-    { name = "ctrlp-vim"; }
     { name = "vim-addon-nix"; }
     { name = "vim-airline"; }
     { name = "vim-airline-themes"; }
     { name = "vim-buffergator"; }
     { name = "vim-coffee-script"; }
     { name = "vim-easy-align"; }
+    { name = "vim-gitgutter"; }
+    { name = "vim-indent-guides"; }
     { name = "vim-multiple-cursors"; }
     { name = "vim-polyglot"; }
     { name = "vim-snippets"; }
-    { name = "fugitive"; }
 
     # example of how to open a package only on certain filenames
     # { name = "phpCompletion"; filename_regex = "^.php\$"; }
