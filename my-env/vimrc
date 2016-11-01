@@ -27,3 +27,8 @@ let g:buffergator_sort_regime    = "filepath"
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor\|result'
 
+let home_rc = expand("~/.vimrc")
+if filereadable(home_rc)
+    execute 'source '.home_rc
+endif
+
