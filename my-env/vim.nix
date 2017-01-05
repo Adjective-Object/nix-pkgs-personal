@@ -7,12 +7,13 @@ vim_configurable.customize {
   vimrcConfig.vam.pluginDictionaries = [
 
     # load always
-    { name = "ctrlp-vim"; }
-    { name = "fugitive"; }
     { name = "Gist"; }
     { name = "Tagbar"; }
     { name = "The_NERD_tree"; }
     { name = "UltiSnips"; }
+    { name = "ctrlp-vim"; }
+    { name = "fugitive"; }
+    { name = "syntastic"; }
     { name = "vim-addon-nix"; }
     { name = "vim-airline"; }
     { name = "vim-airline-themes"; }
